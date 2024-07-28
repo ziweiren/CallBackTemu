@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
     # Rename columns to match the desired order
     df_temu_selected.rename(columns={"货品SKU ID": "商品SKUID"}, inplace=True)
-    df_storage_selected.rename(columns={"跟踪号": "跟踪单号", "派送方式": "物流承运商", "客户订单号": "订单号"}, inplace=True)
+    df_storage_selected.rename(columns={"跟踪号": "跟踪单号", "派送渠道": "物流承运商", "客户订单号": "订单号"}, inplace=True)
 
     combined_df = pd.merge(df_temu_selected, df_storage_selected,
                            on=["订单号"],
